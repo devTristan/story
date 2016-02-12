@@ -1,0 +1,34 @@
+{
+  "name": "story",
+  "version": "1.0.0",
+  "description": "story",
+  "main": "dist/index.js",
+  "author": "Tristan Davies <npm@tristan.io>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -f *.js *.js.map",
+    "build": "npm run clean; babel -s -d . src",
+    "watch": "npm run clean; babel -s -d . -w src",
+    "prepublish": "npm run build",
+    "lint": "standard src/**/*.js",
+    "test": "babel-node src/test/_index.js"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "pre-commit": [
+    "test",
+    "lint"
+  ],
+  "dependencies": {
+    "babel-polyfill": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.5.0",
+    "git-validate": "^2.1.2",
+    "standard": "^5.4.1",
+    "tape": "^4.4.0"
+  }
+}
