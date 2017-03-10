@@ -1,5 +1,7 @@
 # Story
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/devTristan/story.svg)](https://greenkeeper.io/)
+
 Story is an generator-based control flow engine that helps you write
 complex functions that are highly testable. It is an alternative to
 [co](https://github.com/tj/co) and
